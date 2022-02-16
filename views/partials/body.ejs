@@ -1,0 +1,23 @@
+<body>
+    <h1>Items Actuales</h1>
+    <% for (const producto of productos) {%> 
+        <tr> 
+            <td>Nombre</td>
+            <td>:</td>
+            <td>"<%=producto.title %>" </td>
+            <td>Precio</td>
+            <td>:</td>
+            <td><%=producto.price %> </td>
+            
+        </tr>
+        <% } %> 
+
+    <h1>Ingrese producto</h1>
+    <form action="/save" method="post">
+        <h1>Title</h1>
+        <input type="text" name="title">
+        <h1>Price</h1>
+        <input type="number" name="price">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
