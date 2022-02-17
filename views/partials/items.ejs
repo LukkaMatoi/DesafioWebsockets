@@ -1,0 +1,12 @@
+<h1>Agregar Item</h1>
+    <% for (const producto of productos) {%> 
+    <form action="/incart" method="post">
+        <tr> 
+            <td>Nombre: "<%=producto.title %>"</td>
+            <td>Precio: <%=producto.price %></td>
+            <input type="hidden" value="<%=producto.title %>" name="title">
+            <input type="hidden" value="<%=producto.price %>" name="price">
+            <td><button type="submit">Agregar</button></td>
+        </tr>
+    </form>
+        <% } %> 
